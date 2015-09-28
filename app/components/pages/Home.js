@@ -57,13 +57,15 @@ export default class Home extends React.Component {
         return (
             <div className="form">
             <h1>Welcome</h1>
-                            <div className="country-label">Country</div>
-                            <DropDownMenu style={countryStyle} menuItems={menuItems} autoWidth={false}/><br/>
-                            <TextField
-                              floatingLabelText="Mobile"
-                                ref="phone"
-                                errorText={this.state.phoneErrorText}
-                                onChange={::this._handlePhoneInputChange} /><br/><br/>                              
+                            <div className="fields">
+                                <div className="country-label">Country</div>
+                                <DropDownMenu style={countryStyle} menuItems={menuItems} autoWidth={false}/><br/>
+                                <TextField
+                                  floatingLabelText="Mobile"
+                                    ref="phone"
+                                    errorText={this.state.phoneErrorText}
+                                    onChange={::this._handlePhoneInputChange} />
+                            </div>                              
                             <div className="cta">
                               <RaisedButton 
                                 style={buttonStyle} 
@@ -72,7 +74,7 @@ export default class Home extends React.Component {
                                 onTouchTap={::this._handleClickSubmit}
                                 disabled={this.state.disabled} />
                                 <div className="info">
-                                By continuing you agree to terms & privacy policy.
+                                By continuing you agree to <a href="http://www.homepass.com/terms/agent/" target="_blank">terms</a> & <a href="http://homepass.com/terms/privacy/agent"  target="_blank">privacy policy</a>.
                                 </div>
                             </div>
 

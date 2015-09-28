@@ -48,10 +48,12 @@ export default class Verify extends React.Component {
         return (
             <div className="form">
             <h1>Verify your Mobile</h1>
-                            <TextField
-                              floatingLabelText="Verification code"
-                                ref="code"
-                                onChange={::this._handleCodeInputChange} /><br/><br/>                              
+                            <div className="fields">
+                                <TextField
+                                  floatingLabelText="Verification code"
+                                    ref="code"
+                                    onChange={::this._handleCodeInputChange} />
+                            </div>                             
                             <div className="cta">
                               <RaisedButton 
                                 style={buttonStyle} 

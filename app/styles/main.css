@@ -57,24 +57,32 @@ html, body {
 }
 
 .left-panel {    
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center;                
+            justify-content: center; 
+    -webkit-align-items: center; 
+        -ms-flex-align: center; 
+            align-items: center;               
 }
 
 .left-panel .form {
-    margin-top: 90px;
+    margin-top: 20vh;
+    min-height: 60vh;
+}
+
+.left-panel .form .fields {
+    min-height: 30vh;
 }
 
 .left-panel .form .cta {
     width: 100%;
     text-align: center;
-    margin-top: 80px;
+    /*margin-top: 80px;*/
 }
 
 
@@ -85,7 +93,7 @@ html, body {
 }
 
 .left-panel .form .cta .info a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #aaa;
 }
 
@@ -120,9 +128,9 @@ html, body {
             -ms-flex-flow: row nowrap;
                 flex-flow: row nowrap;
     }
-    
-    .left-panel {
-        min-height: 0;
+
+    .left-panel .form .fields {
+        min-height: 40vh;
     }
 
     .right-panel {
