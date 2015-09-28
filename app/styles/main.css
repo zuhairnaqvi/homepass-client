@@ -8,22 +8,28 @@ html, body {
 
 /** Animations **/
 
-.page-enter {
-  opacity: 0.01;
-  transition: all .5s ease-in;
+.page-enter {  
+  transform:   translate(-100%,0);
+  transform: translate3d(-100%,0,0);
+  transition: all 0.2s ease-in-out;
 }
 
-.page-enter.page-enter-active {
-  opacity: 1;
+.page-enter.page-enter-active {  
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition: all 0.2s ease-in-out;  
 }
 
 .page-leave {
-  opacity: 1;
-  transition: all .5s ease-in;
+  transform:   translate(0,0);
+  transform: translate3d(0,0,0);
+  transition: all 0.2s ease-in-out;
 }
 
 .page-leave.page-leave-active {
-  opacity: 0;
+  transform:   translate(100%,0);
+  transform: translate3d(100%,0,0);
+  transition: all 0.2s ease-in-out;  
 }
 
 /** Layout **/
@@ -57,6 +63,8 @@ html, body {
 }
 
 .left-panel {    
+    -webkit-perspective: 800;    
+            perspective: 800;
     min-height: 80vh;
     width: 100%;
     display: -webkit-flex;
