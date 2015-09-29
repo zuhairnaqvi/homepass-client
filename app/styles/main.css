@@ -9,28 +9,37 @@ html, body {
 /** Animations **/
 
 .page-enter {  
-  transform:   translate(-100%,0);
-  transform: translate3d(-100%,0,0);
+  -webkit-transform:   translate(-100%,0);  
+          transform:   translate(-100%,0);
+  -webkit-transform: translate3d(-100%,0,0);
+          transform: translate3d(-100%,0,0);
   transition: all 0.2s ease-in-out;
 }
 
 .page-enter.page-enter-active {  
-  transform:   translate(0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform:   translate(0,0);  
+          transform:   translate(0,0);
+  -webkit-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
   transition: all 0.2s ease-in-out;  
 }
 
 .page-leave {
-  transform:   translate(0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform:   translate(0,0);
+          transform:   translate(0,0);
+  -webkit-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
   transition: all 0.2s ease-in-out;
 }
 
 .page-leave.page-leave-active {
-  transform:   translate(100%,0);
-  transform: translate3d(100%,0,0);
+  -webkit-transform:   translate(100%,0);
+          transform:   translate(100%,0);
+  -webkit-transform: translate3d(100%,0,0);
+          transform: translate3d(100%,0,0);
   transition: all 0.2s ease-in-out;  
 }
+
 
 /** Layout **/
 
@@ -79,12 +88,11 @@ html, body {
 }
 
 .left-panel .form {
-    margin-top: 20vh;
     min-height: 60vh;
 }
 
 .left-panel .form .fields {
-    min-height: 30vh;
+    min-height: 35vh;
 }
 
 .left-panel .form .cta {
@@ -113,6 +121,7 @@ html, body {
 }
 
 .right-panel {
+    margin-top: 50px;
     min-height: 20vh;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -137,11 +146,16 @@ html, body {
                 flex-flow: row nowrap;
     }
 
+    .left-panel .form {
+        margin-top: 50%;
+    }    
+
     .left-panel .form .fields {
         min-height: 40vh;
     }
 
     .right-panel {
+        margin-top: 0;
         height: 100vh;
     }
 }
